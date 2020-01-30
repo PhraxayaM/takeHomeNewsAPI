@@ -44,7 +44,7 @@ class CategoryResultViewController: UIViewController, UITableViewDelegate, UITab
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryResultCell
             cell.backgroundColor = .red
-                    cell.backgroundColor = .blue
+                    cell.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             cell.titleLabel.text = articles[indexPath.row].title
 //            cell.textLabel = "test"
 //            cell.textLabel?.text = NetworkLayer.shared.fetch(category: <#T##String#>)

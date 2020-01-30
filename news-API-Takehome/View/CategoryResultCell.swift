@@ -23,7 +23,7 @@ class CategoryResultCell: UITableViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "test"
-        label.numberOfLines = 3
+        label.numberOfLines = 2
         
         return label
     }()
@@ -55,6 +55,7 @@ class CategoryResultCell: UITableViewCell {
             titleLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
             titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
             titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: 10).isActive = true
+            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 10).isActive = true
             
         }
     
