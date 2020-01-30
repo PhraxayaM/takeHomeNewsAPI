@@ -8,17 +8,11 @@
 
 import Foundation
 
-struct Articles: Decodable {
-    let articles: [News]
+struct ArticleModel: Decodable {
+    let articles: [Article]
 }
 
-struct Source: Decodable {
-    let id: String?
-    let name: String?
-    
-}
-
-struct News: Decodable {
+struct Article: Decodable {
     let source: Source
     let author: String?
     let title: String?
@@ -28,3 +22,10 @@ struct News: Decodable {
     let content: String?
     
 }
+
+struct Source: Decodable {
+    let id: String?
+    let name: String?
+    
+}
+

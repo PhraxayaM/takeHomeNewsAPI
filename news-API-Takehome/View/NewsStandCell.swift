@@ -11,13 +11,13 @@ import UIKit
 
 class NewsStandCell: UICollectionViewCell {
     
-    var button: UIButton = {
-        let button = UIButton()
-        button.setTitle("DummyData", for: .normal)
-        button.layer.cornerRadius = 12
-        button.backgroundColor = .gray
-        return button
-        
+    
+    let categoryLabel: UILabel = {
+        let label = UILabel()
+        label.text = "TEST"
+        label.textAlignment = .center
+        label.numberOfLines = 3
+        return label
     }()
     
     
@@ -25,6 +25,8 @@ class NewsStandCell: UICollectionViewCell {
         super.init(frame: frame)
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 10
+        self.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        setup()
     }
     
     required init?(coder: NSCoder) {
@@ -38,15 +40,16 @@ class NewsStandCell: UICollectionViewCell {
         
     }
     func setupSubview() {
-        addSubview(button)
+//        addSubview(button)
+        addSubview(categoryLabel)
     }
     
     func setupConstraints() {
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.topAnchor.constraint(equalTo: topAnchor, constant: 16).isActive = true
-        button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16).isActive = true
-        button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16).isActive = true
-        button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 16).isActive = true
+        categoryLabel.translatesAutoresizingMaskIntoConstraints = false
+        categoryLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        categoryLabel.topAnchor.constraint(equalTo: topAnchor, constant: 70).isActive = true
+        categoryLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+   
         
     }
 }
